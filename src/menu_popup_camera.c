@@ -495,7 +495,7 @@ uint8_t onUserInfoMenuItemProps(const struct menu_t * menu, const struct menu_it
 }
 uint8_t * onUserInfoItemPaint(const struct menu_t * menu, const struct menu_item_t * self) {
     menu;
-    static const uint8_t * const genders[] = {"not set", "male", "female"};
+    static const uint8_t * const genders[] = {"not set", "male", "female", "enby"};
     switch (self->id) {
         case idPopupCameraOwnerName:
             sprintf(text_buffer, self->caption, userinfo_get_username(text_buffer_extra));
