@@ -69,5 +69,5 @@ uint8_t * userinfo_get_birthdate(uint8_t * buf) BANKED {
 
 uint8_t userinfo_get_gender(void) BANKED {
     CAMERA_SWITCH_RAM(CAMERA_BANK_OWNER_DATA);
-    return ((cam_owner_data.user_info.gender_blood & 0x07) != 0x03) ? cam_owner_data.user_info.gender_blood & 0x07 : 0;
+    return cam_owner_data.user_info.gender_blood & 0x03;
 }
